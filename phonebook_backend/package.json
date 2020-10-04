@@ -1,0 +1,28 @@
+{
+  "name": "phonebook-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "rm -rf build && cd ../../../part2/exercises/the_phonebook && npm run build && cp -r build ../../../part3/exercises/phonebook_backend",
+    "push:git-heroku": "git add -A && git commit -m updatingfrontend && git push heroku master",
+    "lint": "eslint ."
+  },
+  "author": "Alexey Smolyaninov",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.7",
+    "mongoose-unique-validator": "^2.0.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.10.0",
+    "nodemon": "^2.0.4"
+  }
+}
